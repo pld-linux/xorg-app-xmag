@@ -7,6 +7,8 @@ License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/app/xmag-%{version}.tar.bz2
 # Source0-md5:	058d168d1c7c991b8d12158433ea5f63
+Source1:	xmag.desktop
+Source2:	xmag.png
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -41,6 +43,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/xmag.desktop
+install -D %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}/xmag.png
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -49,4 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING ChangeLog
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/X11/app-defaults/*
+%{_desktopdir}/xmag.desktop
+%{_pixmapsdir}/xmag.png
 %{_mandir}/man1/*.1x*
