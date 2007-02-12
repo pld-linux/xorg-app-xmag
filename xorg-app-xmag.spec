@@ -1,5 +1,5 @@
 Summary:	xmag application
-Summary(pl):	Aplikacja xmag
+Summary(pl.UTF-8):   Aplikacja xmag
 Name:		xorg-app-xmag
 Version:	1.0.1
 Release:	1
@@ -22,7 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 xmag application.
 
-%description -l pl
+%description -l pl.UTF-8
 Aplikacja xmag.
 
 %prep
