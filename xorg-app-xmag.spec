@@ -1,5 +1,5 @@
 Summary:	xmag application
-Summary(pl.UTF-8):   Aplikacja xmag
+Summary(pl.UTF-8):	Aplikacja xmag
 Name:		xorg-app-xmag
 Version:	1.0.1
 Release:	1
