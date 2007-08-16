@@ -1,12 +1,12 @@
 Summary:	xmag application
 Summary(pl.UTF-8):	Aplikacja xmag
 Name:		xorg-app-xmag
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xmag-%{version}.tar.bz2
-# Source0-md5:	058d168d1c7c991b8d12158433ea5f63
+# Source0-md5:	7c6a783e42c88360ac31d259a864a19d
 Source1:	xmag.desktop
 Source2:	xmag.png
 URL:		http://xorg.freedesktop.org/
