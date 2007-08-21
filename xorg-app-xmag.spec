@@ -1,5 +1,5 @@
-Summary:	xmag application
-Summary(pl.UTF-8):	Aplikacja xmag
+Summary:	xmag application to magnify parts of the screem
+Summary(pl.UTF-8):	Aplikacja xmag powiększająca kawałki ekranu
 Name:		xorg-app-xmag
 Version:	1.0.2
 Release:	1
@@ -20,10 +20,10 @@ Requires:	xorg-lib-libXt >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-xmag application.
+The xmag program allows you to magnify portions of an X screen.
 
 %description -l pl.UTF-8
-Aplikacja xmag.
+Aplikacja xmag pozwala powiększać części ekranu X.
 
 %prep
 %setup -q -n xmag-%{version}
