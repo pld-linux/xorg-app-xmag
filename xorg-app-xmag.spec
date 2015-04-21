@@ -1,18 +1,19 @@
 Summary:	xmag application to magnify parts of the screem
 Summary(pl.UTF-8):	Aplikacja xmag powiększająca kawałki ekranu
 Name:		xorg-app-xmag
-Version:	1.0.5
+Version:	1.0.6
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xmag-%{version}.tar.bz2
-# Source0-md5:	280b81cb09d1903aa868a058d90128ad
+# Source0-md5:	8aaa41374935d697ee55d7dc9de70781
 Source1:	xmag.desktop
 Source2:	xmag.png
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
@@ -57,4 +58,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/X11/app-defaults/Xmag
 %{_desktopdir}/xmag.desktop
 %{_pixmapsdir}/xmag.png
-%{_mandir}/man1/xmag.1x*
+%{_mandir}/man1/xmag.1*
