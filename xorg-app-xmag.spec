@@ -1,17 +1,17 @@
 Summary:	xmag application to magnify parts of the screem
 Summary(pl.UTF-8):	Aplikacja xmag powiększająca kawałki ekranu
 Name:		xorg-app-xmag
-Version:	1.0.8
+Version:	1.0.9
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	https://xorg.freedesktop.org/releases/individual/app/xmag-%{version}.tar.xz
-# Source0-md5:	ccb2d32cf100d319f23a112886b5c213
+# Source0-md5:	471aa29ad5d0312303129b03b7514d3f
 Source1:	xmag.desktop
 Source2:	xmag.png
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
-BuildRequires:	automake
+BuildRequires:	automake >= 1:1.11
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel
@@ -21,7 +21,7 @@ BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.22
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xz
-Requires:	xorg-lib-libXt >= 1.0.0
+Requires:	xorg-lib-libXt%{?_isa} >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -48,8 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/xmag.desktop
-install -D %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}/xmag.png
+install -Dp %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/xmag.desktop
+install -Dp %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}/xmag.png
 
 %clean
 rm -rf $RPM_BUILD_ROOT
